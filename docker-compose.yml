@@ -8,4 +8,5 @@ services:
       - 443:443
     volumes: 
       - .:/etc/letsencrypt/archive/
-    command: service nginx start 
+      - .:/etc/letsencrypt/live/
+    command: nginx -g 'daemon off;'
