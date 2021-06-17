@@ -1,0 +1,11 @@
+version: '3.0'
+
+services:
+  web:
+    build: .
+    ports:
+      - 80:80
+      - 443:443
+    volumes: 
+      - .:/etc/letsencrypt/archive/
+    command: service nginx start 
